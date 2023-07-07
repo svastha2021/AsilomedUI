@@ -192,8 +192,8 @@ export class PoComponent implements OnInit {
     // temp.item_desc = this.poForm.controls.item_desc.value;
     temp.item_cost = this.poForm.controls.item_cost.value;
     temp.qty_ordered = this.poForm.controls.qty_ordered.value;
-    // temp.net_value = this.poForm.controls.net_value.value;
-    temp.net_value = 0;
+    temp.net_value = parseInt(temp.item_cost) * temp.qty_ordered;
+    //temp.net_value = 0;
     temp.exp_del_date = this.poForm.controls.exp_del_date.value;
     temp.del_branch_id = this.poForm.controls.del_branch_id.value;
     temp.remarks = this.poForm.controls.remarks.value;
