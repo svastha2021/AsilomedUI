@@ -24,7 +24,7 @@ export class GoodsReceiptService {
   getBranchList():Observable<any>{
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.get(environment.apiUrl + 'branches/KRC',
+    return this.http.get(environment.apiUrl + 'branches/'+localStorage.getItem('org_id'),
     { headers: headers })
   }
 

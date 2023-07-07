@@ -22,7 +22,7 @@ export class PatientScheduleService {
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
   
-    return this.http.get(environment.apiUrl + 'schedules/KRC/' + localStorage.getItem('branch_id') + '/' + 
+    return this.http.get(environment.apiUrl + 'schedules/' +localStorage.getItem('org_id')+"/"+ localStorage.getItem('branch_id') + '/' + 
     patient_id+'?bu_id='+bu+'&sch_month='+month+'&sch_year='+year,
       { headers: headers })
   }
