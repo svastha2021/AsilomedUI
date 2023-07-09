@@ -1,6 +1,7 @@
 export const environment = {
   production: true,  
-  apiUrl: 'https://node-devel.vibhavatech.com/v1/',
+  //apiUrl: 'https://node-devel.vibhavatech.com/v1/',
+  apiUrl: 'https://node-dev-am.vibhavatech.com/v1/',
   firebaseConfig : {
     apiKey: "AIzaSyB_aDK4dfM2rpCI_LpHqK4l78KY-fJWAZ8",
     authDomain: "krc-dev-f64de.firebaseapp.com",
