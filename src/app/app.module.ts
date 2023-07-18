@@ -10,13 +10,15 @@ import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { CommonComponentModule } from './common/common.module';
+import { BmrModule } from './modules/bmr/bmr.module';
+
 import { LoginComponent } from './login/login.component';
 
 import { AuthService } from './services/auth.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './common/material.module';
 
 import { InfoDialogComponent } from './utilities/info-dialog/info-dialog.component';
 import { PatientListDialogComponent } from './utilities/patient-list-dialog/patient-list-dialog.component';
@@ -80,10 +82,10 @@ import { InvoiceProductTable } from './invoice-product-report/invoice-product-ta
 
 import { LandingComponent } from './landing/landing.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
+    AppComponent,    
     LoginComponent,
 
     InfoDialogComponent,
@@ -156,7 +158,10 @@ import { LandingComponent } from './landing/landing.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
+    CommonComponentModule,
+    BmrModule
   ],
+  exports:[CommonComponentModule],
   providers: [AuthService, DatePipe],
   bootstrap: [AppComponent],
 })

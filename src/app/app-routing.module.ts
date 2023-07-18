@@ -177,6 +177,11 @@ const routes: Routes = [
     path: 'invoice-product-report',
     component: InvoiceProductReportComponent,
   },
+  {
+    path: 'bmr',
+    loadChildren: () =>
+      import('./modules/bmr/bmr.module').then((module) => module.BmrModule),
+  },
 ];
 
 @NgModule({

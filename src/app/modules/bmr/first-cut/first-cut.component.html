@@ -1,0 +1,28 @@
+<app-header></app-header>
+<app-common-detail></app-common-detail>
+<div class="container mar20t">
+    <h3>1st Cut</h3>
+  <mat-expansion-panel hideToggle class="margin-20b first-cut-container">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Blocking </mat-panel-title>
+      <mat-panel-description> Add information </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-data-table [tableData]="tableData" (dataEmit)="receieveData($event)"></app-data-table>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel hideToggle class="margin-20b first-cut-container">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Lathe Cut </mat-panel-title>
+      <mat-panel-description> Add information </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-data-table [tableData]="tableData" (dataEmit)="receieveData($event)"></app-data-table>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel hideToggle class="margin-20b first-cut-container">
+    <mat-expansion-panel-header>
+      <mat-panel-title> De-Blocking & Cleaning </mat-panel-title>
+      <mat-panel-description> Add information </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-data-table [tableData]="tableData" (dataEmit)="receieveData($event)"></app-data-table>
+  </mat-expansion-panel>
+</div>

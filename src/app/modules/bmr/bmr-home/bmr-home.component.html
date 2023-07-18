@@ -1,0 +1,15 @@
+<app-header></app-header>
+<app-common-detail></app-common-detail>
+<div class="container">
+  <h3>BMR</h3>
+  <mat-list>
+    <mat-list-item *ngFor="let message of bmrSections" (click)="navigate(message)">
+      <mat-icon matListItemIcon>pageview</mat-icon>
+      <h5 matListItemTitle>{{ message }}</h5>
+      <!-- <p matListItemLine>
+              <span>{{message.subject}}</span>
+              <span class="demo-2"> -- {{message.content}}</span>
+            </p> -->
+    </mat-list-item>
+  </mat-list>
+</div>
